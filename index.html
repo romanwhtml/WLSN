@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#101a27">
+	<title>WLSN 8 — News &amp; Music</title>
+	<style>
+		:root {
+			color-scheme: dark;
+			--ink: #f5f2e9;
+			--muted: #aeb8c2;
+			--night: #101a27;
+			--panel: #182637;
+			--lime: #d7f36a;
+			--orange: #ff8767;
+		}
 
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			background: var(--night);
+			color: var(--ink);
+			font-family: "Trebuchet MS", Arial, sans-serif;
+			line-height: 1.5;
+		}
+		a { color: inherit; text-decoration: none; }
+		.wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 24px 0;
+			border-bottom: 1px solid #ffffff20;
+		}
+		.brand { font-weight: 900; letter-spacing: -.06em; font-size: 1.45rem; }
+		.brand span { color: var(--lime); }
+		nav { display: flex; gap: 25px; color: var(--muted); font-size: .9rem; }
+		nav a:hover { color: var(--lime); }
+		.hero {
+			min-height: 430px;
+			display: grid;
+			grid-template-columns: 1.2fr .8fr;
+			align-items: center;
+			gap: 40px;
+			padding: 65px 0;
+		}
+		.eyebrow { color: var(--lime); font-size: .76rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+		h1 { max-width: 650px; margin: 14px 0 18px; font-size: clamp(3.2rem, 8vw, 6.5rem); line-height: .92; letter-spacing: -.075em; }
+		h1 em { color: var(--lime); font-style: normal; }
+		.intro { max-width: 480px; color: var(--muted); font-size: 1.08rem; }
+		.button {
+			display: inline-flex;
+			align-items: center;
+			gap: 12px;
+			margin-top: 20px;
+			padding: 14px 20px;
+			border-radius: 999px;
+			background: var(--lime);
+			color: var(--night);
+			font-weight: 900;
+			transition: transform .2s ease, background .2s ease;
+		}
+		.button:hover { transform: translateY(-2px); background: #e6ff8c; }
+		.button .play { font-size: 1.1rem; }
+		.on-air {
+			position: relative;
+			overflow: hidden;
+			min-height: 280px;
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			border: 1px solid #ffffff20;
+			border-radius: 24px;
+			background: radial-gradient(circle at 75% 25%, #ff876766, transparent 38%), var(--panel);
+		}
+		.live { display: flex; align-items: center; gap: 9px; color: var(--orange); font-size: .75rem; font-weight: 900; letter-spacing: .15em; }
+		.live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 12px currentColor; }
+		.frequency { font-size: clamp(3.5rem, 8vw, 5.5rem); font-weight: 900; letter-spacing: -.09em; line-height: 1; }
+		.frequency small { font-size: 1rem; letter-spacing: .08em; color: var(--lime); }
+		.on-air p { margin: 10px 0 0; color: var(--muted); }
+		.bars { position: absolute; right: 28px; bottom: 30px; display: flex; gap: 5px; align-items: end; height: 48px; }
+		.bars i { width: 5px; height: 30%; border-radius: 5px; background: var(--lime); }
+		.bars i:nth-child(2n) { height: 75%; }
+		.bars i:nth-child(3n) { height: 48%; }
+		.bars i:nth-child(4n) { height: 100%; }
+		.section-heading { display: flex; justify-content: space-between; align-items: baseline; margin: 10px 0 18px; }
+		h2 { margin: 0; font-size: 1.4rem; letter-spacing: -.04em; }
+		.section-heading span { color: var(--muted); font-size: .85rem; }
+		.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding-bottom: 58px; }
+		.card { min-height: 155px; padding: 22px; border-radius: 16px; background: var(--panel); }
+		.card .tag { color: var(--lime); font-size: .7rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+		.card h3 { margin: 12px 0 5px; font-size: 1.15rem; }
+		.card p { margin: 0; color: var(--muted); font-size: .9rem; }
+		footer { border-top: 1px solid #ffffff20; padding: 20px 0 28px; color: var(--muted); font-size: .82rem; }
+		@media (max-width: 700px) {
+			.hero { grid-template-columns: 1fr; gap: 28px; padding: 48px 0; }
+			.on-air { min-height: 230px; }
+			.cards { grid-template-columns: 1fr; }
+			nav { gap: 14px; }
+		}
+		@media (max-width: 430px) {
+			.wrap { width: min(100% - 28px, 1080px); }
+			nav a:first-child { display: none; }
+			header { padding: 18px 0; }
+		}
+	</style>
+</head>
+<body>
+	<header class="wrap">
+		<a class="brand" href="index.html" aria-label="WLSN 8 home">WLSN <span>8</span></a>
+		<nav aria-label="Main navigation">
+			<a href="#shows">Shows</a>
+			<a href="#about">About</a>
+			<a href="listen.html">Listen</a>
+		</nav>
+	</header>
+
+	<main class="wrap">
+		<section class="hero" id="about">
+			<div>
+				<div class="eyebrow">Your town, tuned in</div>
+				<h1>Good music.<br><em>Real news.</em></h1>
+				<p class="intro">WLSN 8 brings the stories that matter and the sounds that move you—right here, all day long.</p>
+				<a class="button" href="listen.html"><span class="play" aria-hidden="true">▶</span> Listen live</a>
+			</div>
+			<div class="on-air" aria-label="WLSN 8 radio, on air">
+				<div class="live">ON AIR</div>
+				<div>
+					<div class="frequency">WLSN <small>8</small></div>
+					<p>News, music &amp; everything in between.</p>
+				</div>
+				<div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+			</div>
+		</section>
+
+		<section id="shows" aria-labelledby="shows-title">
+			<div class="section-heading">
+				<h2 id="shows-title">On the dial</h2>
+				<span>A little something for your day</span>
+			</div>
+			<div class="cards">
+				<article class="card">
+					<div class="tag">Morning · 7–10 AM</div>
+					<h3>The Daily Wake</h3>
+					<p>Local headlines and a bright start to your morning.</p>
+				</article>
+				<article class="card">
+					<div class="tag">Midday · 12–2 PM</div>
+					<h3>Lunchbox Mix</h3>
+					<p>Fresh favorites and deep cuts to keep you moving.</p>
+				</article>
+				<article class="card">
+					<div class="tag">Evenings · 6–8 PM</div>
+					<h3>After Hours</h3>
+					<p>Good conversation, new discoveries, and local voices.</p>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<footer><div class="wrap">© 2025 WLSN 8 · Your town, tuned in.</div></footer>
+</body>
+</html>
