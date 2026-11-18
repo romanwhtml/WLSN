@@ -11,6 +11,7 @@
 	<style>
 		:root{color-scheme:light;--paper:#eef4ee;--ink:#17231e;--muted:#65736c;--line:#cbd7ce;--white:#fffefa;--green:#176d52;--lime:#d8f36a;--red:#d9513d;--mono:"DM Mono",monospace;--sans:Manrope,sans-serif}*{box-sizing:border-box}body{margin:0;background-color:var(--paper);background-image:radial-gradient(#17231e13 .7px,transparent .7px);background-size:9px 9px;color:var(--ink);font-family:var(--sans);line-height:1.5}button,input,select{font:inherit}button{cursor:pointer}.shell{width:min(1120px,calc(100% - 40px));margin:auto}header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:800;font-size:1.25rem}.brand b{color:var(--green)}nav{display:flex;gap:23px;color:var(--muted);font-size:.9rem}a{color:inherit;text-decoration:none}nav a:hover{color:var(--green)}main{padding:48px 0 72px}.topline{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.eyebrow{font:500 .72rem var(--mono);color:var(--green);text-transform:uppercase}.topline h1{font-size:clamp(2.1rem,5vw,3.8rem);letter-spacing:0;line-height:1;margin:7px 0 0}.auth{display:flex;align-items:center;gap:10px}.auth form{display:flex;gap:8px}.input{border:1px solid var(--line);background:var(--white);padding:10px 11px;min-width:0}.auth input{width:180px}.primary,.secondary,.danger{border:0;padding:10px 14px;font-weight:800}.primary{background:var(--green);color:#fff}.secondary{background:var(--lime);color:var(--ink)}.danger{background:#f8dfd8;color:#832f21}.auth-state{font:400 .72rem var(--mono);color:var(--muted)}.grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:22px;align-items:start}.panel{background:var(--white);border:1px solid var(--line);padding:22px}.panel+ .panel{margin-top:18px}.panel-heading{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:16px;gap:14px}.panel-heading h2{font-size:1.05rem;margin:0}.panel-heading span{font:400 .68rem var(--mono);color:var(--muted)}.upload-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}.upload-form input[type=text]{min-width:0}.file-input{grid-column:1/-1;width:100%;padding:11px;border:1px dashed #9aaba0;background:#f6f8f2}.upload-form button{grid-column:1/-1}.hint,.status{font:400 .72rem var(--mono);color:var(--muted);min-height:1.4em;margin:10px 0 0}.status.error{color:#a53627}.list{list-style:none;margin:0;padding:0}.media-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.media-item:last-child{border-bottom:0}.media-title{font-weight:700;overflow-wrap:anywhere}.media-meta{font:400 .67rem var(--mono);color:var(--muted);text-transform:uppercase}.item-actions{display:flex;gap:7px;align-items:center}.item-actions button{padding:7px 9px;font-size:.74rem}.cues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cue{display:flex;flex-direction:column;gap:9px;border:1px solid var(--line);padding:12px;background:#f3f6ed;min-width:0}.cue-play{border:0;text-align:left;background:var(--lime);font-weight:800;padding:12px;overflow-wrap:anywhere;min-height:48px}.cue-tools{display:flex;gap:8px;align-items:center}.cue-tools input{flex:1;min-width:0;padding:7px;border:1px solid var(--line);background:var(--white);font-size:.76rem}.cue-tools button{border:0;background:transparent;color:var(--muted);font-size:.72rem;text-decoration:underline;padding:4px}.cue-form{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-top:15px;padding-top:15px;border-top:1px solid var(--line)}.cue-form input,.cue-form select{min-width:0;padding:9px;border:1px solid var(--line);background:var(--white)}.onair{background:var(--ink);color:var(--white)}.onair .panel-heading{border-color:#ffffff30}.onair .panel-heading span{color:#bdc9c0}.onair-title{font-size:1.1rem;font-weight:800;overflow-wrap:anywhere}.live-tag{display:inline-flex;align-items:center;gap:8px;color:#ff9074;font:500 .69rem var(--mono);text-transform:uppercase}.live-tag:before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;animation:pulse 1.4s infinite}.onair audio,.onair video{width:100%;max-height:250px;margin-top:12px}.onair p{color:#bdc9c0;font-size:.8rem}.config{margin-top:22px}.config summary{cursor:pointer;color:var(--muted);font:400 .7rem var(--mono)}.config form{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-top:12px}.config input{width:100%;padding:9px;border:1px solid var(--line);background:var(--white)}.empty{color:var(--muted);font-size:.86rem;padding:10px 0}footer{border-top:1px solid var(--line);padding:20px 0 28px;color:var(--muted);font:400 .72rem var(--mono)}[disabled]{opacity:.55;cursor:not-allowed}@keyframes pulse{50%{opacity:.4}}@media(max-width:800px){.grid{grid-template-columns:1fr}.topline{align-items:flex-start;flex-direction:column}.auth form{flex-wrap:wrap}.auth input{width:min(42vw,220px)}}@media(max-width:560px){.shell{width:calc(100% - 28px)}header{height:68px}nav{gap:12px;font-size:.78rem}main{padding-top:35px}.panel{padding:16px}.cue-form{grid-template-columns:1fr 1fr}.cue-form button{grid-column:1/-1}.config form{grid-template-columns:1fr}.auth{width:100%}.auth form{width:100%}.auth input{flex:1;width:auto}.cues{grid-template-columns:1fr 1fr}}
 		[hidden]{display:none!important}
+		.capture-preview{width:100%;aspect-ratio:16/9;object-fit:contain;background:#050505;margin-top:12px}.capture-tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.recording{color:#b23325;font:500 .72rem var(--mono);min-height:1.5em;margin-top:8px}.onair-stage{width:100%;aspect-ratio:16/9;background:#050505;display:grid;place-items:center;margin-top:12px}.onair-stage img,.onair-stage video{width:100%;height:100%;object-fit:contain;background:#050505}.onair-stage audio{display:none}
 	</style>
 </head>
 <body>
@@ -19,17 +20,19 @@
 		<div class="topline"><div><div class="eyebrow">Studio control</div><h1>Broadcast desk</h1></div><div class="auth"><div class="auth-state" id="auth-state">Connect Supabase to sign in</div><form id="login-form"><input class="input" id="email" type="email" autocomplete="username" placeholder="Studio email" aria-label="Studio email" required><input class="input" id="password" type="password" autocomplete="current-password" placeholder="Password" aria-label="Password" required><button class="primary" type="submit">Sign in</button></form><button class="secondary" id="signout" type="button" hidden>Sign out</button></div></div>
 		<div class="grid">
 			<div>
-				<section class="panel"><div class="panel-heading"><h2>Upload to broadcast</h2><span>AUDIO · VIDEO</span></div><form class="upload-form" id="upload-form"><input class="input" id="media-title" type="text" placeholder="Clip title" aria-label="Clip title" maxlength="100" required><input class="file-input" id="media-file" type="file" accept="audio/*,video/*" required><button class="primary" type="submit" id="upload-button">Upload &amp; play on air</button></form><p class="hint">The new upload goes live as soon as it finishes.</p><div class="status" id="upload-status" role="status"></div></section>
+				<section class="panel"><div class="panel-heading"><h2>Upload to broadcast</h2><span>AUDIO · VIDEO · IMAGE</span></div><form class="upload-form" id="upload-form"><input class="input" id="media-title" type="text" placeholder="Clip title" aria-label="Clip title" maxlength="100" required><input class="file-input" id="media-file" type="file" accept="audio/*,video/*,image/*" required><button class="primary" type="submit" id="upload-button">Upload &amp; play on air</button></form><p class="hint">The new upload goes live as soon as it finishes.</p><div class="status" id="upload-status" role="status"></div></section>
+				<section class="panel"><div class="panel-heading"><h2>Record at the studio</h2><span>CAMERA · MICROPHONE</span></div><input class="input" id="record-title" type="text" maxlength="100" placeholder="Recording title" aria-label="Recording title"><select class="input" id="record-source" aria-label="Recording source"><option value="video">Camera + microphone</option><option value="audio">Microphone only</option></select><video class="capture-preview" id="capture-preview" autoplay muted playsinline hidden></video><div class="capture-tools"><button class="primary" id="start-recording" type="button">Start recording</button><button class="danger" id="stop-recording" type="button" disabled>Stop &amp; publish</button></div><div class="recording" id="recording-status" role="status"></div></section>
 				<section class="panel"><div class="panel-heading"><h2>Media library</h2><span id="media-count">0 ITEMS</span></div><ul class="list" id="media-list"><li class="empty">Connect to load your library.</li></ul></section>
 				<section class="panel"><div class="panel-heading"><h2>Instant-play buttons</h2><span id="cue-count">0 BUTTONS</span></div><div class="cues" id="cue-list"><div class="empty">Sign in to manage cue buttons.</div></div><form class="cue-form" id="cue-form"><input class="input" id="cue-label" type="text" placeholder="Button label" aria-label="Button label" maxlength="48" required><select id="cue-media" aria-label="Choose a media clip" required><option value="">Choose a clip</option></select><button class="secondary" type="submit" id="add-cue">Add button</button></form><div class="status" id="cue-status" role="status"></div></section>
 			</div>
 			<aside>
-				<section class="panel onair"><div class="panel-heading"><h2>Now on air</h2><span class="live-tag" id="air-state">STANDBY</span></div><div class="onair-title" id="air-title">Nothing on air yet</div><div id="air-player"><p>Upload a clip or press an instant-play button.</p></div></section>
+				<section class="panel onair"><div class="panel-heading"><h2>Now on air</h2><span class="live-tag" id="air-state">STANDBY</span></div><div class="onair-title" id="air-title">Nothing on air yet</div><div id="air-player" class="onair-stage"><span>Nothing on air yet</span></div><button class="secondary" id="toggle-air" type="button" disabled>Pause for everyone</button></section>
 				<details class="config" open><summary>Supabase connection</summary><form id="config-form"><input id="project-url" type="url" placeholder="https://your-project.supabase.co" aria-label="Supabase project URL" required><input id="anon-key" type="password" autocomplete="off" placeholder="Publishable anon key" aria-label="Supabase publishable key" required><button class="primary" type="submit">Connect</button></form><div class="status" id="connection-status" role="status">Not connected</div></details>
 			</aside>
 		</div>
 	</main>
 	<footer><div class="shell">WLSN 8 · Broadcast desk</div></footer>
+	<script src="supabase-config.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 	<script>
 		const CONFIG_KEY = 'wlsn-supabase-config';
@@ -38,9 +41,14 @@
 		let currentUser = null;
 		let mediaItems = [];
 		let playingUrl = '';
+		let recorder;
+		let recordingStream;
+		let recordingChunks = [];
 		const $ = (id) => document.getElementById(id);
+		const fileConfig = window.WLSN_SUPABASE_CONFIG;
 		const savedConfig = JSON.parse(localStorage.getItem(CONFIG_KEY) || 'null');
-		if (savedConfig) { $('project-url').value = savedConfig.url || ''; $('anon-key').value = savedConfig.key || ''; }
+		const initialConfig = fileConfig?.url?.startsWith('https://') && fileConfig?.anonKey && !fileConfig.anonKey.startsWith('YOUR_') ? { url: fileConfig.url, key: fileConfig.anonKey } : savedConfig;
+		if (initialConfig) { $('project-url').value = initialConfig.url || ''; $('anon-key').value = initialConfig.key || ''; }
 		function setStatus(id, text, isError = false) { const element = $(id); element.textContent = text; element.classList.toggle('error', isError); }
 		$('config-form').addEventListener('submit', (event) => {
 			event.preventDefault();
@@ -89,19 +97,57 @@
 			event.preventDefault();
 			if (!client || !currentUser) return setStatus('upload-status', 'Connect Supabase and sign in first.', true);
 			const file = $('media-file').files[0];
-			if (!file || (!file.type.startsWith('audio/') && !file.type.startsWith('video/'))) return setStatus('upload-status', 'Choose an audio or video file.', true);
-			const title = $('media-title').value.trim() || file.name;
-			const path = `${currentUser.id}/${crypto.randomUUID()}-${file.name.replace(/[^a-zA-Z0-9._-]/g, '-')}`;
-			$('upload-button').disabled = true; setStatus('upload-status', 'Uploading…');
-			const { error: uploadError } = await client.storage.from(BUCKET).upload(path, file, { contentType: file.type, upsert: false });
-			if (uploadError) { $('upload-button').disabled = false; return setStatus('upload-status', uploadError.message, true); }
-			const { data: item, error: insertError } = await client.from('media_library').insert({ title, media_type: file.type.startsWith('video/') ? 'video' : 'audio', storage_path: path, created_by: currentUser.id }).select('id').single();
-			if (insertError) { $('upload-button').disabled = false; return setStatus('upload-status', insertError.message, true); }
-			await refreshData();
-			const { error: playError } = await putOnAir(item.id, true);
+			if (!file) return setStatus('upload-status', 'Choose an audio, video, or image file.', true);
+			$('upload-button').disabled = true;
+			const { error } = await publishMedia(file, $('media-title').value.trim() || file.name);
 			$('upload-button').disabled = false;
-			if (!playError) { $('upload-form').reset(); setStatus('upload-status', 'Upload complete. Now playing on air.'); }
+			if (!error) { $('upload-form').reset(); setStatus('upload-status', 'Upload complete. Now playing on air.'); }
 		});
+		async function publishMedia(file, title) {
+			if (!client || !currentUser) { const error = new Error('Connect Supabase and sign in first.'); setStatus('upload-status', error.message, true); return { error }; }
+			const mediaType = file.type.startsWith('image/') ? 'image' : file.type.startsWith('video/') ? 'video' : file.type.startsWith('audio/') ? 'audio' : null;
+			if (!mediaType) { const error = new Error('Choose a supported audio, video, or image file.'); setStatus('upload-status', error.message, true); return { error }; }
+			const path = `${currentUser.id}/${crypto.randomUUID()}-${file.name.replace(/[^a-zA-Z0-9._-]/g, '-')}`;
+			setStatus('upload-status', 'Uploading…');
+			const { error: uploadError } = await client.storage.from(BUCKET).upload(path, file, { contentType: file.type, upsert: false });
+			if (uploadError) { setStatus('upload-status', uploadError.message, true); return { error: uploadError }; }
+			const { data: item, error: insertError } = await client.from('media_library').insert({ title, media_type: mediaType, storage_path: path, created_by: currentUser.id }).select('id').single();
+			if (insertError) { setStatus('upload-status', insertError.message, true); return { error: insertError }; }
+			await refreshData();
+			return putOnAir(item.id, true);
+		}
+		$('start-recording').addEventListener('click', async () => {
+			if (!client || !currentUser) return setStatus('recording-status', 'Connect Supabase and sign in first.', true);
+			if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) return setStatus('recording-status', 'This browser does not support camera or microphone recording.', true);
+			try {
+				const videoMode = $('record-source').value === 'video';
+				recordingStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: videoMode });
+				const preview = $('capture-preview');
+				preview.hidden = !videoMode;
+				if (videoMode) preview.srcObject = recordingStream;
+				const mimeOptions = videoMode ? ['video/webm;codecs=vp9,opus', 'video/webm'] : ['audio/webm;codecs=opus', 'audio/webm'];
+				const mimeType = mimeOptions.find((type) => MediaRecorder.isTypeSupported(type));
+				recorder = new MediaRecorder(recordingStream, mimeType ? { mimeType } : undefined);
+				recordingChunks = [];
+				recorder.addEventListener('dataavailable', (event) => { if (event.data.size) recordingChunks.push(event.data); });
+				recorder.addEventListener('stop', async () => {
+					const blob = new Blob(recordingChunks, { type: recorder.mimeType });
+					recordingStream.getTracks().forEach((track) => track.stop());
+					preview.srcObject = null; preview.hidden = true;
+					const fallbackTitle = videoMode ? 'Studio video' : 'Studio audio';
+					const title = $('record-title').value.trim() || `${fallbackTitle} ${new Date().toLocaleString()}`;
+					const file = new File([blob], `${title.replace(/[^a-zA-Z0-9_-]/g, '-')}.webm`, { type: blob.type });
+					$('stop-recording').disabled = true;
+					const { error } = await publishMedia(file, title);
+					$('start-recording').disabled = false;
+					setStatus('recording-status', error ? 'Recording could not be published.' : 'Recording published and now on air.', !!error);
+				});
+				recorder.start();
+				$('start-recording').disabled = true; $('stop-recording').disabled = false;
+				setStatus('recording-status', 'Recording. Stop to upload and play it for listeners.');
+			} catch (error) { setStatus('recording-status', error.message || 'Could not start recording.', true); }
+		});
+		$('stop-recording').addEventListener('click', () => { if (recorder?.state === 'recording') { recorder.stop(); $('stop-recording').disabled = true; setStatus('recording-status', 'Preparing recording…'); } });
 		async function putOnAir(mediaId, report = false) {
 			if (!currentUser) { setStatus('cue-status', 'Sign in to control the broadcast.', true); return { error: new Error('Sign in required') }; }
 			const { error } = await client.from('station_state').upsert({ id: true, current_media_id: mediaId, is_playing: true, play_token: crypto.randomUUID(), updated_at: new Date().toISOString() }, { onConflict: 'id' });
@@ -110,19 +156,42 @@
 			if (!report) setStatus('cue-status', 'Now playing on air.');
 			return { error: null };
 		}
+		$('toggle-air').addEventListener('click', async () => {
+			if (!currentUser) return;
+			const isPlaying = $('toggle-air').dataset.playing === 'true';
+			const { error } = await client.from('station_state').update({ is_playing: !isPlaying, updated_at: new Date().toISOString() }).eq('id', true);
+			if (error) setStatus('cue-status', error.message, true); else await loadOnAir();
+		});
 		$('cue-form').addEventListener('submit', async (event) => { event.preventDefault(); if (!client || !currentUser) return setStatus('cue-status', 'Connect and sign in first.', true); const label = $('cue-label').value.trim(); const mediaId = $('cue-media').value; if (!label || !mediaId) return; const { error } = await client.from('cue_buttons').insert({ label, media_id: mediaId, position: Date.now() }); if (error) return setStatus('cue-status', error.message, true); $('cue-form').reset(); setStatus('cue-status', 'Instant-play button added.'); loadCues(); });
 		async function loadOnAir() {
 			if (!client) return;
 			const { data: station } = await client.from('station_state').select('current_media_id,is_playing,play_token').eq('id', true).maybeSingle();
-			if (!station?.current_media_id) { $('air-state').textContent = 'STANDBY'; $('air-title').textContent = 'Nothing on air yet'; $('air-player').innerHTML = '<p>Upload a clip or press an instant-play button.</p>'; playingUrl = ''; return; }
+			if (!station?.current_media_id) { $('air-state').textContent = 'STANDBY'; $('air-title').textContent = 'Nothing on air yet'; $('air-player').innerHTML = '<span>Nothing on air yet</span>'; $('toggle-air').disabled = true; playingUrl = ''; return; }
 			const { data: item } = await client.from('media_library').select('title,media_type,storage_path').eq('id', station.current_media_id).maybeSingle();
 			if (!item) return;
 			$('air-state').textContent = station.is_playing ? 'LIVE' : 'PAUSED'; $('air-title').textContent = item.title;
+			$('toggle-air').disabled = false; $('toggle-air').dataset.playing = String(station.is_playing); $('toggle-air').textContent = station.is_playing ? 'Pause for everyone' : 'Play for everyone';
 			const { data: file } = client.storage.from(BUCKET).getPublicUrl(item.storage_path);
-			if (playingUrl !== file.publicUrl || $('air-player').dataset.playToken !== station.play_token) { playingUrl = file.publicUrl; $('air-player').dataset.playToken = station.play_token; const media = document.createElement(item.media_type === 'video' ? 'video' : 'audio'); media.controls = true; media.autoplay = station.is_playing; media.playsInline = true; media.src = playingUrl; $('air-player').replaceChildren(media); if (station.is_playing) media.play().catch(() => {}); }
+			if (playingUrl !== file.publicUrl || $('air-player').dataset.playToken !== station.play_token) {
+				playingUrl = file.publicUrl; $('air-player').dataset.playToken = station.play_token;
+				const media = document.createElement(item.media_type === 'image' ? 'img' : item.media_type);
+				media.src = playingUrl;
+				if (item.media_type !== 'image') { media.controls = false; media.autoplay = station.is_playing; media.playsInline = true; media.addEventListener('ended', () => finishBroadcast(station.play_token)); }
+				$('air-player').replaceChildren(media);
+			}
+			const media = $('air-player').querySelector('audio,video,img');
+			if (media.tagName === 'IMG') media.hidden = !station.is_playing;
+			else if (station.is_playing && media.paused) media.play().catch(() => {});
+			else if (!station.is_playing && !media.paused) media.pause();
+		}
+		async function finishBroadcast(playToken) {
+			const { data: station } = await client.from('station_state').select('play_token').eq('id', true).maybeSingle();
+			if (station?.play_token !== playToken) return;
+			await client.from('station_state').update({ current_media_id: null, is_playing: false, play_token: crypto.randomUUID(), updated_at: new Date().toISOString() }).eq('id', true);
+			await loadOnAir();
 		}
 		function escapeHtml(value) { return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]); }
-		if (savedConfig?.url && savedConfig?.key) connect(savedConfig);
+		if (initialConfig?.url && initialConfig?.key) connect(initialConfig);
 	</script>
 </body>
 </html>

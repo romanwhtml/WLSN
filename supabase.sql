@@ -3,11 +3,15 @@
 create table if not exists public.media_library (
   id uuid primary key default gen_random_uuid(),
   title text not null,
-  media_type text not null check (media_type in ('audio', 'video')),
+  media_type text not null check (media_type in ('audio', 'video', 'image')),
   storage_path text not null unique,
   created_by uuid not null references auth.users(id) on delete cascade,
   created_at timestamptz not null default now()
 );
+
+alter table public.media_library drop constraint if exists media_library_media_type_check;
+alter table public.media_library add constraint media_library_media_type_check
+  check (media_type in ('audio', 'video', 'image'));
 
 create table if not exists public.cue_buttons (
   id uuid primary key default gen_random_uuid(),

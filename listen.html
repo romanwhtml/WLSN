@@ -12,9 +12,15 @@
 		:root{color-scheme:light;--paper:#eef4ee;--ink:#17231e;--muted:#607169;--line:#cbd7ce;--panel:#fffefa;--green:#176d52;--lime:#d8f36a;--red:#d9513d;--mono:"DM Mono",monospace;--sans:Manrope,sans-serif}
 		*{box-sizing:border-box}body{margin:0;background-color:var(--paper);background-image:radial-gradient(#17231e13 .7px,transparent .7px);background-size:9px 9px;color:var(--ink);font-family:var(--sans);line-height:1.5}button,input{font:inherit}button{cursor:pointer}.shell{width:min(1120px,calc(100% - 40px));margin:auto}header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:800;font-size:1.25rem;letter-spacing:0}.brand b{color:var(--green)}nav{display:flex;gap:24px;color:var(--muted);font-size:.9rem}a{color:inherit;text-decoration:none}nav a:hover{color:var(--green)}.eyebrow{font:500 .72rem var(--mono);letter-spacing:0;color:var(--green);text-transform:uppercase}.layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(270px,.7fr);gap:54px;padding:58px 0 74px}.main-col{min-width:0}h1{font-size:clamp(2.4rem,6vw,4.7rem);letter-spacing:0;line-height:1.02;margin:10px 0 26px}.live-box{background:var(--ink);color:#f7f5eb;padding:26px;min-height:290px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.live-box:after{content:"";position:absolute;right:-42px;top:40px;width:210px;height:210px;border:1px solid #d8f36a55;border-radius:50%;box-shadow:0 0 0 22px #d8f36a10,0 0 0 44px #d8f36a0b}.live-row{display:flex;align-items:center;gap:9px;font:500 .72rem var(--mono);letter-spacing:0;color:#ff876c}.dot{width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 12px currentColor;animation:pulse 1.4s infinite}.now-title{position:relative;z-index:1;font-size:1.6rem;font-weight:800;max-width:70%;overflow-wrap:anywhere}.now-type{color:#bdc9c0;font:400 .78rem var(--mono);margin-top:5px}.player-wrap{position:relative;z-index:1;margin-top:18px;max-width:580px}.player-wrap audio,.player-wrap video{display:block;width:100%;max-height:300px}.placeholder{color:#bdc9c0;font-size:.92rem}.enable{border:0;background:var(--lime);color:var(--ink);font-weight:800;padding:11px 15px;margin-top:12px}.section-title{display:flex;align-items:baseline;justify-content:space-between;margin:42px 0 14px;border-bottom:1px solid var(--line);padding-bottom:10px}.section-title h2{margin:0;font-size:1.2rem}.section-title span{font:400 .7rem var(--mono);color:var(--muted)}.track-list{list-style:none;padding:0;margin:0}.track{display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.track-index{font:400 .72rem var(--mono);color:var(--green)}.track-name{font-weight:700;overflow-wrap:anywhere}.track-meta{font:400 .68rem var(--mono);color:var(--muted);text-transform:uppercase}.empty{color:var(--muted);padding:16px 0}.side{padding-top:8px}.side h2{font-size:1.15rem;margin:0 0 12px}.side p{color:var(--muted);font-size:.9rem}.side a{font-weight:700;color:var(--green)}.connect{margin-top:35px;border-top:1px solid var(--line);padding-top:17px}.connect summary{cursor:pointer;font:500 .73rem var(--mono);color:var(--muted)}.connect form{display:grid;gap:10px;margin-top:14px}.connect label{font-size:.76rem;font-weight:700}.connect input{width:100%;padding:10px;border:1px solid var(--line);background:var(--panel)}.connect button{padding:10px;border:0;background:var(--green);color:white;font-weight:800}.status{font:400 .72rem var(--mono);color:var(--muted);min-height:1.4em;margin-top:8px}footer{border-top:1px solid var(--line);padding:20px 0 28px;color:var(--muted);font:400 .72rem var(--mono)}@keyframes pulse{50%{opacity:.4}}@media(max-width:760px){.layout{grid-template-columns:1fr;gap:28px;padding-top:38px}.side{padding-top:0}.live-box{min-height:250px}header{height:68px}nav{gap:14px}}@media(max-width:420px){.shell{width:calc(100% - 28px)}nav{font-size:.8rem;gap:10px}.live-box{padding:19px}.now-title{max-width:100%}.section-title span{font-size:.62rem}}
 	</style>
+	<style>
+		.player-wrap video,.player-wrap img{aspect-ratio:16/9;object-fit:contain;background:#050505}
+		.player-wrap audio{display:none}
+		.off-air{width:100%;aspect-ratio:16/9;background:#050505}
+		footer a{color:var(--green);font-weight:700}
+	</style>
 </head>
 <body>
-	<header class="shell"><a class="brand" href="index.html">WLSN <b>8</b></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="broadcast.html">Broadcast desk</a></nav></header>
+	<header class="shell"><a class="brand" href="index.html">WLSN <b>8</b></a><nav aria-label="Main navigation"><a href="index.html">Home</a></nav></header>
 	<main class="shell layout">
 		<section class="main-col" aria-labelledby="page-title">
 			<div class="eyebrow">WLSN 8 · On air</div><h1 id="page-title">Listen live.</h1>
@@ -30,7 +36,8 @@
 			<details class="connect"><summary>Supabase connection</summary><form id="config-form"><div><label for="project-url">Project URL</label><input id="project-url" type="url" placeholder="https://your-project.supabase.co" required></div><div><label for="anon-key">Publishable anon key</label><input id="anon-key" type="password" autocomplete="off" placeholder="sb_publishable_…" required></div><button type="submit">Connect</button></form><div class="status" id="connection-status" role="status">Not connected</div></details>
 		</aside>
 	</main>
-	<footer><div class="shell">© 2026 WLSN 8 · Your town, tuned in.</div></footer>
+	<footer><div class="shell">© 2026 WLSN 8 · Your town, tuned in. · <a href="broadcast.html">Broadcast desk</a></div></footer>
+	<script src="supabase-config.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 	<script>
 		const CONFIG_KEY = 'wlsn-supabase-config';
@@ -39,8 +46,10 @@
 		let activeUrl = '';
 		let activePlayToken = '';
 		const $ = (id) => document.getElementById(id);
+		const fileConfig = window.WLSN_SUPABASE_CONFIG;
 		const savedConfig = JSON.parse(localStorage.getItem(CONFIG_KEY) || 'null');
-		if (savedConfig) { $('project-url').value = savedConfig.url || ''; $('anon-key').value = savedConfig.key || ''; }
+		const initialConfig = fileConfig?.url?.startsWith('https://') && fileConfig?.anonKey && !fileConfig.anonKey.startsWith('YOUR_') ? { url: fileConfig.url, key: fileConfig.anonKey } : savedConfig;
+		if (initialConfig) { $('project-url').value = initialConfig.url || ''; $('anon-key').value = initialConfig.key || ''; }
 		$('config-form').addEventListener('submit', (event) => {
 			event.preventDefault();
 			const config = { url: $('project-url').value.trim(), key: $('anon-key').value.trim() };
@@ -59,34 +68,41 @@
 			const { data, error } = await client.from('media_library').select('id,title,media_type,created_at').order('created_at', { ascending: false }).limit(50);
 			if (error) { $('track-list').innerHTML = '<li class="empty">Could not load the library. Check the Supabase setup.</li>'; return; }
 			$('library-count').textContent = `${data.length} ITEM${data.length === 1 ? '' : 'S'}`;
-			$('track-list').innerHTML = data.length ? data.map((item, index) => `<li class="track"><span class="track-index">${String(index + 1).padStart(2, '0')}</span><span><span class="track-name">${escapeHtml(item.title)}</span><br><span class="track-meta">${item.media_type === 'video' ? 'Video' : 'Audio'} · ${new Date(item.created_at).toLocaleDateString()}</span></span><span class="track-meta">WLSN</span></li>`).join('') : '<li class="empty">No uploads yet.</li>';
+			$('track-list').innerHTML = data.length ? data.map((item, index) => `<li class="track"><span class="track-index">${String(index + 1).padStart(2, '0')}</span><span><span class="track-name">${escapeHtml(item.title)}</span><br><span class="track-meta">${item.media_type === 'image' ? 'Image' : item.media_type === 'video' ? 'Video' : 'Audio'} · ${new Date(item.created_at).toLocaleDateString()}</span></span><span class="track-meta">WLSN</span></li>`).join('') : '<li class="empty">No uploads yet.</li>';
 		}
 		async function loadStation() {
 			if (!client) return;
 			const { data: station, error } = await client.from('station_state').select('current_media_id,is_playing,play_token').eq('id', true).maybeSingle();
-			if (error || !station?.current_media_id) { $('air-status').textContent = 'STANDBY'; $('now-title').textContent = 'Nothing on air yet'; $('now-type').textContent = 'Check back soon'; $('player-wrap').innerHTML = ''; return; }
+			if (error || !station?.current_media_id) { $('air-status').textContent = 'STANDBY'; $('now-title').textContent = 'Nothing on air yet'; $('now-type').textContent = 'Check back soon'; $('player-wrap').innerHTML = '<div class="off-air"></div>'; $('enable-audio').hidden = true; activeUrl = ''; activePlayToken = ''; return; }
 			const { data: item } = await client.from('media_library').select('id,title,media_type,storage_path').eq('id', station.current_media_id).maybeSingle();
 			if (!item) return;
 			$('air-status').textContent = station.is_playing ? 'ON AIR' : 'PAUSED';
 			$('now-title').textContent = item.title;
-			$('now-type').textContent = item.media_type === 'video' ? 'Live video' : 'Live audio';
+			$('now-type').textContent = item.media_type === 'image' ? 'Live image' : item.media_type === 'video' ? 'Live video' : 'Live audio';
 			const { data: file } = client.storage.from(BUCKET).getPublicUrl(item.storage_path);
 			if (activeUrl !== file.publicUrl || activePlayToken !== station.play_token) {
 				activeUrl = file.publicUrl;
 				activePlayToken = station.play_token;
-				const media = document.createElement(item.media_type === 'video' ? 'video' : 'audio');
-				media.controls = true; media.autoplay = station.is_playing; media.playsInline = true; media.src = activeUrl;
-				media.addEventListener('play', () => { $('enable-audio').hidden = true; });
+				const media = document.createElement(item.media_type === 'image' ? 'img' : item.media_type);
+				media.src = activeUrl;
+				if (item.media_type !== 'image') {
+					media.controls = false; media.autoplay = station.is_playing; media.playsInline = true;
+					media.addEventListener('play', () => { $('enable-audio').hidden = true; });
+					media.addEventListener('ended', () => { $('player-wrap').innerHTML = '<div class="off-air"></div>'; $('air-status').textContent = 'OFF AIR'; });
+				}
 				$('player-wrap').replaceChildren(media);
-				if (station.is_playing) media.play().catch(() => { $('enable-audio').hidden = false; });
+				if (media.tagName === 'IMG') media.hidden = !station.is_playing;
+				else if (station.is_playing) media.play().catch(() => { $('enable-audio').hidden = false; });
 			} else {
-				const media = $('player-wrap').querySelector('audio,video');
-				if (media && station.is_playing && media.paused) media.play().catch(() => { $('enable-audio').hidden = false; });
+				const media = $('player-wrap').querySelector('audio,video,img');
+				if (media.tagName === 'IMG') media.hidden = !station.is_playing;
+				else if (station.is_playing && media.paused) media.play().catch(() => { $('enable-audio').hidden = false; });
+				else if (!station.is_playing && !media.paused) media.pause();
 			}
 		}
 		$('enable-audio').addEventListener('click', () => { const media = $('player-wrap').querySelector('audio,video'); if (media) media.play().then(() => { $('enable-audio').hidden = true; }).catch(() => {}); });
 		function escapeHtml(value) { return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]); }
-		if (savedConfig?.url && savedConfig?.key) connect(savedConfig);
+		if (initialConfig?.url && initialConfig?.key) connect(initialConfig);
 	</script>
 </body>
 </html>
